@@ -11,9 +11,11 @@
 |
 */
 
-Route::get('/', 'SpinController@index');
+Route::get('/yes-no', 'SpinController@YesNo');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('/blog', 'BlogController');
 Route::resource('/post', 'PostController');
+
+Route::get('/{names?}', 'SpinController@index');
