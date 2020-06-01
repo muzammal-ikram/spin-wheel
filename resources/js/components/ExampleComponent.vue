@@ -13,7 +13,7 @@
         </div> -->
 
        <VueWinwheel :segments="options"  ref="childComponent" />
-       
+      
        <div id="addQuestion">
         <table >
             <tr>
@@ -63,11 +63,11 @@
                     <hr>
                 </td>
             </tr>
-            <tr>
+            <!-- <tr>
                 <td style="text-align: center;">
                     <input type="text" v-model="location" id="location"> <button type="button" class="btn btn-primary" @click="copy()">Copy</button>
                 </td>
-            </tr>
+            </tr> -->
         </table>
     </div> 
 
@@ -85,7 +85,7 @@
       components:{
         VueWinwheel
       },
-      props:['currentUser'],
+      props:['options'],
       computed:{
         //   one(){
         //       return "one";
@@ -98,6 +98,11 @@
           return{
             renderComponent: true,
               name_str : '',
+            //   values: [{
+            //           text: "Prize 1",
+            //       },{
+            //           text: "Prize 2",
+            //       }],
               values:[
                   {
                       text: "Prize 1",
@@ -124,48 +129,48 @@
                       text: "Prize 8",
                   },
               ],
-                options:[
-                {
-                            textFillStyle: '#fff',
-                            fillStyle: '#000',
-                            text:'Prize 2'
-                        },
-                        {
-                            textFillStyle: '#000',
-                            fillStyle: '#fadede',
-                            text:'Prize 2'
-                        },
-                        {
-                            textFillStyle: '#fff',
-                            fillStyle: '#000',
-                            text:'Prize 3'
-                        },
-                        {
-                            textFillStyle: '#000',
-                            fillStyle: '#fadede',
-                            text:'Prize 4'
-                        },
-                        {
-                            textFillStyle: '#fff',
-                            fillStyle: '#000',
-                            text:'Prize 5'
-                        },
-                        {
-                            textFillStyle: '#000',
-                            fillStyle: '#fadede',
-                            text:'Prize 6'
-                        },
-                        {
-                            textFillStyle: '#fff',
-                            fillStyle: '#000',
-                            text:'Prize 7'
-                        },
-                        {
-                            textFillStyle: '#000',
-                            fillStyle: '#fadede',
-                            text:'Prize 8'
-                        } 
-                    ]
+                // options:[
+                // {
+                //             textFillStyle: '#fff',
+                //             fillStyle: '#000',
+                //             text:'Prize 2'
+                //         },
+                //         {
+                //             textFillStyle: '#000',
+                //             fillStyle: '#fadede',
+                //             text:'Prize 2'
+                //         },
+                //         {
+                //             textFillStyle: '#fff',
+                //             fillStyle: '#000',
+                //             text:'Prize 3'
+                //         },
+                //         {
+                //             textFillStyle: '#000',
+                //             fillStyle: '#fadede',
+                //             text:'Prize 4'
+                //         },
+                //         {
+                //             textFillStyle: '#fff',
+                //             fillStyle: '#000',
+                //             text:'Prize 5'
+                //         },
+                //         {
+                //             textFillStyle: '#000',
+                //             fillStyle: '#fadede',
+                //             text:'Prize 6'
+                //         },
+                //         {
+                //             textFillStyle: '#fff',
+                //             fillStyle: '#000',
+                //             text:'Prize 7'
+                //         },
+                //         {
+                //             textFillStyle: '#000',
+                //             fillStyle: '#fadede',
+                //             text:'Prize 8'
+                //         } 
+                //     ]
           }
       },
       methods:{
@@ -174,12 +179,10 @@
         },
             add() {
                 this.values.push({ text: '' });
-    
-                console.log("add");
+     
             },
             remove(k) {
-                this.values.splice(k, 1);
-                console.log("remove");
+                this.values.splice(k, 1); 
             },
         reset(){
             this.modalShown = !this.modalShown;
@@ -207,19 +210,7 @@
                 this.options = [];
                 this.values.map(function(val){
                     if(val.text != ''){
-                        if(num%2 == 0){
-                            Arr.push({
-                                textFillStyle: '#000',
-                                fillStyle: '#fadede',
-                                text:val.text
-                            })   
-                        }else{
-                            Arr.push(  {
-                                textFillStyle: '#fff',
-                                fillStyle: '#000',
-                                text:val.text
-                            })
-                        }
+                        
                         ValArr.push(val.text);
                         num ++;
                     }
@@ -283,40 +274,33 @@
             }
         },
         mounted(){
-            
-            if(this.currentUser != ''){
-                let names = this.currentUser.replace('names=', '');
-                names = names.split(",");
-                    this.options = [];
+
+                    let names = this.options;
                     this.values = [];
                     let Arr = [];
                     let Val = [];
                     let num = 0;
                     
                     names.map(function(name){ 
-                        if(num%2 == 0){
-                            Arr.push({
-                                textFillStyle: '#000',
-                                fillStyle: '#fadede',
-                                text:name
-                            })   
-                        }else{
-                            Arr.push(  {
-                                textFillStyle: '#fff',
-                                fillStyle: '#000',
-                                text:name
-                            })
-                        }
                         Val.push({
-                            text: name,
+                            text: name.text,
                         })
                         num ++;
                     })
-                    
-                    this.options =  Arr;
                     this.values = Val;
-                  
-                }
+                   
         }
     }
     </script>
+    <style scoped>
+        #addQuestion{
+            width: 100%;
+            color: #333333;
+            margin: 0 auto;
+            padding: 10px 0;
+            align-items: center;
+            justify-content: space-around;
+            display: flex;
+            float: none;
+        }
+    </style>
