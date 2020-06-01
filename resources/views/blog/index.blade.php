@@ -12,7 +12,7 @@
             <a href="" title="">
               <h4 class="card-title px-2"></h4>
             </a>
-            <a class="card-text px-2"  href="/singleBlog/2" >Vestibulum enim quam</a>
+            <a class="card-text px-2"  href="/blog/name-of-blog" >Vestibulum enim quam</a>
         </div>
            <div class="card-footer" style="height:200px;">
             <small class="text-muted">jhasjdhajkdhaksjd d asdnask kjdkas

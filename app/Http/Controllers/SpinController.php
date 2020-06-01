@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 class SpinController extends Controller
 {
     public function index($names = null){
-        // dd($names);
         $data['name'] = $names;
         return view('spin.index', $data);
     }

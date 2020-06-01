@@ -10,25 +10,49 @@ if($name != null){
     $Val = [];
     $name = explode(',', $name);
 
-
+    $name = array_chunk($name, 3);
+    // dd($name);
     foreach ($name as $n) {
-        if($num%2 == 0){
-            array_push($Arr, [
-                    'textFillStyle'=>'#000',
+        // if($num%2 == 0){
+        //     array_push($Arr, [
+        //             'textFillStyle'=>'#000',
+        //             'fillStyle'=> '#fadede',
+        //             'text'=>$n
+        //         ]);
+        //     }else{
+        //         array_push($Arr, [
+        //             'textFillStyle'=> '#fff',
+        //             'fillStyle'=> '#000',
+        //             'text'=>$n
+        //         ]);
+        //     }
+        foreach ($n as $key=> $value) {
+            
+               if($key==0){
+                    array_push($Arr, [
+                        'textFillStyle'=> '#fff',
+                        'fillStyle'=> '#000',
+                            'text'=>$value
+                    ]);
+               }elseif($key==1){
+                array_push($Arr, [
+                    'textFillStyle'=> '#000',
                     'fillStyle'=> '#fadede',
-                    'text'=>$n
+                    'text'=>$value
                 ]);
-            }else{
+               }else{
                 array_push($Arr, [
                     'textFillStyle'=> '#fff',
-                    'fillStyle'=> '#000',
-                    'text'=>$n
+                    'fillStyle'=> 'grey',
+                    'text'=>$value
                 ]);
-            }
-            array_push($Val, [
-                'text'=> $n,
-            ]);
-            $num ++;
+               }
+               array_push($Val, [
+                    'text'=> $value,
+                ]);
+                $num ++;
+        }
+           
     }
 
 }else{
@@ -36,7 +60,7 @@ if($name != null){
                 [
                     'textFillStyle'=> '#fff',
                     'fillStyle'=> '#000',
-                    'text'=> 'Prize 2'
+                    'text'=> 'Prize 1'
                 ],
                 [
                     'textFillStyle'=> '#000',
@@ -45,7 +69,7 @@ if($name != null){
                 ],
                 [
                     'textFillStyle'=> '#fff',
-                    'fillStyle'=> '#000',
+                    'fillStyle'=> 'grey',
                     'text'=> 'Prize 3'
                 ],
                 [
@@ -60,7 +84,7 @@ if($name != null){
                 ],
                 [
                     'textFillStyle'=> '#000',
-                    'fillStyle'=> '#fadede',
+                    'fillStyle'=> 'grey',
                     'text'=> 'Prize 6'
                 ],
                 [
