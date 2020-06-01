@@ -11,21 +11,8 @@ if($name != null){
     $name = explode(',', $name);
 
     $name = array_chunk($name, 3);
-    // dd($name);
+    
     foreach ($name as $n) {
-        // if($num%2 == 0){
-        //     array_push($Arr, [
-        //             'textFillStyle'=>'#000',
-        //             'fillStyle'=> '#fadede',
-        //             'text'=>$n
-        //         ]);
-        //     }else{
-        //         array_push($Arr, [
-        //             'textFillStyle'=> '#fff',
-        //             'fillStyle'=> '#000',
-        //             'text'=>$n
-        //         ]);
-        //     }
         foreach ($n as $key=> $value) {
             
                if($key==0){
