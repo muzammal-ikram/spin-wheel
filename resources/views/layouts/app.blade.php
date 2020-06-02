@@ -123,15 +123,15 @@
   
           <ul class="list-unstyled">
             <li>
-              <router-link class="nav-link"  to="/" style="color:black;">Privacy Policy</router-link>
+              <a class="nav-link"  href="/privacy-policy" style="color:black;">Privacy Policy</a>
 
             </li>
             <li>
-             <router-link class="nav-link"  to="/" style="color:black;">Term And Conditions</router-link>
+             <a class="nav-link"  href="/terms-and-conditions" style="color:black;">Term And Conditions</a>
             
             </li>
             <li>
-             <router-link class="nav-link"  to="/contact-us" style="color:black;">Contact Us</router-link>
+             <a class="nav-link"  href="/contact-us" style="color:black;">Contact Us</a>
             </li>  
           </ul>
   

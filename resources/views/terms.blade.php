@@ -1,8 +1,6 @@
 @extends('layouts.app')
 @section('content')
-
-<yesno-component></yesno-component>
-
+    
 
 <div class="container-fluid">
 
@@ -83,4 +81,3 @@ Just spin the wheel and get the random answer to your question whether it is eas
       </div>
 </div>
 @endsection
-

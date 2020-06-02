@@ -17,6 +17,15 @@ Auth::routes();
 Route::get('/blog/name-of-blog', function () {
     return view('blog_post.post1');
 });
+Route::get('/privacy-policy', function () {
+    return view('privacy_policy');
+});
+Route::get('/terms-and-conditions', function () {
+    return view('terms');
+});
+Route::get('/contact-us', function () {
+    return view('contact_us');
+});
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('/blog', 'BlogController');
