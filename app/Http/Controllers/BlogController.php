@@ -13,8 +13,7 @@ class BlogController extends Controller
      */
     public function index()
     {
-        $data['posts'] = Post::paginate(2);
-        return view('blog.index', $data);
+        return view('blog.index');
     }
 
     /**
