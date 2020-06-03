@@ -17,6 +17,21 @@ Auth::routes();
 Route::get('/blog/name-of-blog', function () {
     return view('blog_post.post1');
 });
+
+Route::get('/blog/how-do-you-use-a-decision-wheel/', function () {
+    return view('blog_post.use_wheel');
+});
+
+Route::get('blog/How-do-you-use-a-name-wheel/', function () {
+    return view('blog_post.use_a_name_wheel');
+});
+
+Route::get('/blog/how-to-work-a-wheel-spinner/', function () {
+    return view('blog_post.work_wheel');
+});
+
+
+
 Route::get('/privacy-policy', function () {
     return view('privacy_policy');
 });

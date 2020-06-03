@@ -35,7 +35,7 @@
     
             <!-- Form actions -->
             <div class="form-group">
-              <div class="col-md-6 text-right">
+            <div class="col-md-6 text-right">
                 <button type="submit" class="btn btn-primary btn-lg">Submit</button>
               </div>
             </div>
