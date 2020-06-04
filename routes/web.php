@@ -11,39 +11,39 @@
 |
 */
 
-Route::get('/yes-or-no/', 'SpinController@YesNo');
+Route::get('/yes-or-no', 'SpinController@YesNo');
 Auth::routes();
 
 Route::get('/blog/name-of-blog', function () {
     return view('blog_post.post1');
 });
 
-Route::get('/blog/how-do-you-use-a-decision-wheel/', function () {
+Route::get('/blog/how-do-you-use-a-decision-wheel', function () {
     return view('blog_post.use_wheel');
 });
 
-Route::get('blog/How-do-you-use-a-name-wheel/', function () {
+Route::get('blog/How-do-you-use-a-name-wheel', function () {
     return view('blog_post.use_a_name_wheel');
 });
 
-Route::get('/blog/how-to-work-a-wheel-spinner/', function () {
+Route::get('/blog/how-to-work-a-wheel-spinner', function () {
     return view('blog_post.work_wheel');
 });
 
-Route::get('/blog/how-do-you-decide-on-a-wheel/', function () {
+Route::get('/blog/how-do-you-decide-on-a-wheel', function () {
     return view('blog_post.decide_wheel');
 });
 
-Route::get('/blog/how-does-a-spinning-wheel-game-work/', function () {
+Route::get('/blog/how-does-a-spinning-wheel-game-work', function () {
     return view('blog_post.spin_wheel_game_work');
 });
 
 
-Route::get('/blog/how-does-work-spin-the-wheel-game-online/', function () {
+Route::get('/blog/how-does-work-spin-the-wheel-game-online', function () {
     return view('blog_post.spin_wheel_game_online');
 });
 
-Route::get('/blog/how-do-you-use-a-name-picker-wheel/', function () {
+Route::get('/blog/how-do-you-use-a-name-picker-wheel', function () {
     return view('blog_post.spin_wheel_pick_name');
 });
 
