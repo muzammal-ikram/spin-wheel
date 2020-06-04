@@ -92,7 +92,7 @@
         <a class="nav-link" href="/">Wheel Decide</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/yes-no">Yes or No Wheel</a>
+        <a class="nav-link" href="/yes-or-no/">Yes or No Wheel</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/blog">Blog</a>

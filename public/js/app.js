@@ -2050,6 +2050,18 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
  // import NavBar from './NavBar.vue'
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2068,6 +2080,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
+      wheel_name: 'Wheel Decide Pro',
       renderComponent: true,
       name_str: '',
       //   values: [{
@@ -47367,7 +47380,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'VueWinWheel',
-  props:{
+  props:{ 
 		segments:{
 			default(){
 				return [
@@ -47524,8 +47537,6 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("section", { staticClass: "vue-winwheel" }, [
     _c("div", { staticClass: "mobile-container" }, [
-      _c("h1", [_vm._v("Vue-Winwheel")]),
-      _vm._v(" "),
       _c("div", { staticClass: "wheel-wrapper" }, [
         _vm._m(0),
         _vm._v(" "),
@@ -47629,6 +47640,8 @@ var render = function() {
       "div",
       { staticClass: "container" },
       [
+        _vm._m(0),
+        _vm._v(" "),
         _c("VueWinwheel", {
           ref: "childComponent",
           attrs: { segments: _vm.options }
@@ -47640,9 +47653,9 @@ var render = function() {
     _c("div", { staticClass: "container-fluid" }, [
       _c("div", { attrs: { id: "addQuestion" } }, [
         _c("table", [
-          _vm._m(0),
-          _vm._v(" "),
           _vm._m(1),
+          _vm._v(" "),
+          _vm._m(2),
           _vm._v(" "),
           _c("tr", [
             _c(
@@ -47744,15 +47757,35 @@ var render = function() {
             ])
           ]),
           _vm._v(" "),
-          _vm._m(2)
+          _vm._m(3)
         ])
       ]),
       _vm._v(" "),
-      _vm._m(3)
+      _vm._m(4)
     ])
   ])
 }
 var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("section", { staticClass: "vue-winwheel" }, [
+      _c("div", { staticClass: "mobile-container" }, [
+        _c(
+          "h1",
+          {
+            staticStyle: {
+              "text-align": "center",
+              "margin-top": "30px",
+              "margin-bottom": "30px"
+            }
+          },
+          [_vm._v("Wheel Decide Pro")]
+        )
+      ])
+    ])
+  },
   function() {
     var _vm = this
     var _h = _vm.$createElement

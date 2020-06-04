@@ -12,7 +12,18 @@
             </div>
         </div> -->
     <div class="container">
-       <VueWinwheel :segments="options"  ref="childComponent" />
+    <section class="vue-winwheel">
+			<div class="mobile-container">
+    	            <h1 style="    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+
+">Wheel Decide Pro</h1>
+            </div>
+    </section>
+
+       <VueWinwheel :segments="options"   ref="childComponent" />
     </div>
     <div class="container-fluid">
     
@@ -74,7 +85,8 @@
     </div> 
 
 
-<!-- <div class="container-fluid"> -->
+<!-- <div cla
+ss="container-fluid"> -->
 
     <div class="card" style="border: none; padding: 20px;">
         <div class="card-body">
@@ -159,6 +171,7 @@
       },
       data(){
           return{
+              wheel_name:'Wheel Decide Pro',
             renderComponent: true,
               name_str : '',
             //   values: [{

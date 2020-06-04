@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/yes-no', 'SpinController@YesNo');
+Route::get('/yes-or-no/', 'SpinController@YesNo');
 Auth::routes();
 
 Route::get('/blog/name-of-blog', function () {
@@ -30,6 +30,22 @@ Route::get('/blog/how-to-work-a-wheel-spinner/', function () {
     return view('blog_post.work_wheel');
 });
 
+Route::get('/blog/how-do-you-decide-on-a-wheel/', function () {
+    return view('blog_post.decide_wheel');
+});
+
+Route::get('/blog/how-does-a-spinning-wheel-game-work/', function () {
+    return view('blog_post.spin_wheel_game_work');
+});
+
+
+Route::get('/blog/how-does-work-spin-the-wheel-game-online/', function () {
+    return view('blog_post.spin_wheel_game_online');
+});
+
+Route::get('/blog/how-do-you-use-a-name-picker-wheel/', function () {
+    return view('blog_post.spin_wheel_pick_name');
+});
 
 
 Route::get('/privacy-policy', function () {
